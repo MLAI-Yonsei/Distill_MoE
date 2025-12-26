@@ -25,3 +25,5 @@ utills_distill_moe 폴더에 LLaMA Factory에서 사용할 수 있는 코드를 
 transformer 패키지에 모델 코드를 추가해도 해당 import를 해야 model class를 인식하고 해당 모델을 사용할 수 있음
 
 4. `config.json`: model의 config 파일, 가끔 model_type이 distill_llama 로 되어 있지 않아서 일반 tinyllama를 사용하게 되는 경우가 있음, 해당 파일을 보고 config가 제대로 구성되어 있는지 확인 필수
+
+5. `distill_moe_full_MSE.yaml`: train argument 관련 파일 `CUDA_VISIBLE_DEVICES=0,1,2,3 FORCE_TORCHRUN=1 llamafactory-cli train ./distill_moe_full_MSE.yaml`로 실행하면 학습 가능
